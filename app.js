@@ -29,8 +29,8 @@ app.use((req, res, next) => {
 })
 
 /* { ----------- RUTAS WEB ----------- } */
-app.get('/', async(req, res) => {
-    res.render('index', { })
+app.get('/', (req, res) => {
+    res.render('index', {})
 })
 
 /* { ----------- API ROUTING ----------- } */
