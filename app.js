@@ -32,8 +32,10 @@ app.use((req, res, next) => {
 });
 
 /* { ----------- RUTAS WEB ----------- } */
-app.get('/', (req, res) => {
-    res.render('index', {});
+app.get('/', async (req, res) => {
+    await Test.find({}).then((data) => {
+        res.render('index', { tests: data })
+    });
 });
 
 /* { ----------- API ROUTING ----------- } */
