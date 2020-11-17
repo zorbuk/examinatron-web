@@ -25,6 +25,7 @@ app.use(express.json())
 
 app.use((req, res, next) => {
     console.log("new request.")
+    next();
 })
 
 /* { ----------- RUTAS WEB ----------- } */
