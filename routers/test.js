@@ -2,7 +2,7 @@ const express = require('express')
 const Test = require('../models/test')
 const router = new express.Router()
 
-router.post('/test', async (req, res) => {
+router.post('/tests', async (req, res) => {
     const test = new Test(req.body)
 
     try {
