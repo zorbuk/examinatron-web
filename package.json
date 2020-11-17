@@ -1,22 +1,22 @@
 {
   "name": "examinatron",
   "version": "1.0.0",
-  "description": "app ej para clase",
+  "description": "examinatronweb",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon -r dotenv/config app.js"
   },
-  "author": "miquel valero recasens",
+  "author": "mvr",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.5",
+    "ejs": "^3.1.2",
     "express": "^4.17.1",
-    "heroku": "^7.47.2"
+    "heroku": "^7.47.2",
+    "mongoose": "^5.10.14"
   },
   "devDependencies": {
-    "mongoose": "^5.10.15",
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.6"
   }
 }
