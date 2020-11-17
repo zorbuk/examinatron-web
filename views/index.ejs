@@ -7,8 +7,8 @@
   <div class="blogs content">
     <% if (tests.length > 0) { %>
       <% tests.forEach(test => { %>
+        <b><%= test.question %></b>
         <ol>
-        <li><b><%= test.question %></b></li>
         <li><i><%= test.answer1 %></i></li>
         <li><i><%= test.answer2 %></i></li>
         <li><i><%= test.answer3 %></i></li>
