@@ -1,5 +1,5 @@
 /* { ----------- EXPRESS ----------- } */
-const express = require('express')
+const express = require('express');
 const app = express();
 
 /* { ----------- MODELS & ROUTERS ----------- } */
