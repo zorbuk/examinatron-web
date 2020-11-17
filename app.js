@@ -38,8 +38,12 @@ app.get('/', async (req, res) => {
     });
 });
 app.get('/crear', async (req, res) => {
-        res.render('crear', {  })
+    res.render('crear', {  })
 });
+
+app.post('/crear', (req,res) => {
+    res.redirect('index');
+})
 
 /* { ----------- API ROUTING ----------- } */
 // EXAMPLE: app.use('/api', modelRouter)
