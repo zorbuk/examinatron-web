@@ -37,12 +37,12 @@ app.get('/', async (req, res) => {
         res.render('index', { tests: data })
     });
 });
-app.get('/crear', async (req, res) => {
+app.get('/crear', (req, res) => {
     res.render('crear', {  })
 });
 
 app.post('/crear', (req,res) => {
-    res.redirect(307, '/');
+    res.redirect(307, './')
 })
 
 /* { ----------- API ROUTING ----------- } */
