@@ -37,6 +37,9 @@ app.get('/', async (req, res) => {
         res.render('index', { tests: data })
     });
 });
+app.get('/crear', async (req, res) => {
+        res.render('crear', {  })
+});
 
 /* { ----------- API ROUTING ----------- } */
 // EXAMPLE: app.use('/api', modelRouter)

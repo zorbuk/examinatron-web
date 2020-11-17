@@ -10,6 +10,7 @@ const Test = mongoose.model('Test', {
         required: true,
         answered : {
             type: Boolean,
+            default: false,
             required: true
         }
     },
@@ -18,6 +19,7 @@ const Test = mongoose.model('Test', {
         required: true,
         answered : {
             type: Boolean,
+            default: false,
             required: true
         }
     },
@@ -26,6 +28,7 @@ const Test = mongoose.model('Test', {
         required: true,
         answered : {
             type: Boolean,
+            default: false,
             required: true
         }
     },
@@ -34,6 +37,7 @@ const Test = mongoose.model('Test', {
         required: true,
         answered : {
             type: Boolean,
+            default: false,
             required: true
         }
     },
