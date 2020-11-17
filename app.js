@@ -42,7 +42,9 @@ app.get('/crear', async (req, res) => {
 });
 
 app.post('/crear', (req,res) => {
-    res.redirect('index');
+    await Test.find({}).then((data) => {
+        res.render('index', { tests: data })
+    });
 })
 
 /* { ----------- API ROUTING ----------- } */
