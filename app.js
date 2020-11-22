@@ -41,10 +41,6 @@ app.get('/crear', (req, res) => {
     res.render('crear', {  })
 });
 
-app.post('/crear', (req,res) => {
-    res.redirect(307, './')
-})
-
 /* { ----------- API ROUTING ----------- } */
 // EXAMPLE: app.use('/api', modelRouter)
 app.use('/api', testRouter);

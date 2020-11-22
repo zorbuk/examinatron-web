@@ -7,7 +7,8 @@ router.post('/tests', async (req, res) => {
 
     try {
         await test.save()
-        res.status(201).send(Test)
+        res.status(201).send(test)
+        window.location.href = "/";
     } catch (e) {
         res.status(400).send(e)
     }
