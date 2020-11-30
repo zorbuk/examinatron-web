@@ -1,0 +1,19 @@
+$color:blue;
+
+@use 'form';
+
+div{
+    width:90%;
+    margin:auto;
+    h1{
+        color:red;
+        background-color: black;
+    }
+    p{
+        font-size: 16px;
+        color:$color;
+    }
+    form{
+        background-color: pink;
+    }
+}

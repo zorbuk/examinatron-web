@@ -9,10 +9,10 @@
       <% tests.forEach(test => { %>
         <b><%= test.question %></b>
         <ol>
-        <li><i><%= test.answer1 %></i></li>
-        <li><i><%= test.answer2 %></i></li>
-        <li><i><%= test.answer3 %></i></li>
-        <li><i><%= test.answer4 %></i></li>
+        <li><input type="radio" name="<%= test._id %>" value="<%= test._id %>"> <i><%= test.answer1 %></i></li>
+        <li><input type="radio" name="<%= test._id %>" value="<%= test._id %>"> <i><%= test.answer2 %></i></li>
+        <li><input type="radio" name="<%= test._id %>" value="<%= test._id %>"> <i><%= test.answer3 %></i></li>
+        <li><input type="radio" name="<%= test._id %>" value="<%= test._id %>"> <i><%= test.answer4 %></i></li>
         </ol>
       <% }) %>
     <% } else { %>

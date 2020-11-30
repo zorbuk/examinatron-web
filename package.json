@@ -4,8 +4,9 @@
   "description": "examinatronweb",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon -r dotenv/config app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon -r dotenv/config src/app.js",
+    "sass": "sass --watch src/:public/css/"
   },
   "author": "mvr",
   "license": "ISC",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "sass": "^1.29.0"
   }
 }
