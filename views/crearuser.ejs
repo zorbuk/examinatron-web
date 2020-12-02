@@ -1,0 +1,26 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="blogs content">
+    <form action="/api/users" method="POST">
+        <fieldset>
+            <legend>Crea un Test</legend><br>
+            <label for="name">name:</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="type">email:</label>
+            <input type="text" name="email" id="email"><br>
+            <label for="type">password:</label>
+            <input type="text" name="password" id="password"><br>
+            <label for="type">age:</label>
+            <input type="text" name="age" id="age"><br>
+            <input type="submit" value="Crear User">
+        </fieldset>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
