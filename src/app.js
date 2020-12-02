@@ -44,6 +44,9 @@ app.get('/', async (req, res) => {
 app.get('/crear', (req, res) => {
     res.render('crear', {  })
 });
+app.get('/crearUsuario', (req, res) => {
+    res.render('crearuser', {  })
+});
 
 /* { ----------- API ROUTING ----------- } */
 // EXAMPLE: app.use('/api', modelRouter)
