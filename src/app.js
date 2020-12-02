@@ -3,9 +3,9 @@ const express = require('express');
 const app = express();
 
 /* { ----------- MODELS & ROUTERS ----------- } */
-require("./db/mongoose");
-const Test = require('./models/test');
-const testRouter = require('./routers/test');
+require("../db/mongoose");
+const Test = require('../models/test');
+const testRouter = require('../routers/test');
 
 /* { ----------- PORT ----------- } */
 const port = process.env.PORT || 3000
