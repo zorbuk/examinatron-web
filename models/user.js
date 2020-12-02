@@ -11,6 +11,8 @@ const User = mongoose.model('User', {
         type: String,
         required: true,
         trim:true,
+        unique: true,
+        lowercase: true,
         validate(value){
             if(!validator.isEmail(value))
                 throw new Error('Email incorrecto pana');
@@ -19,7 +21,8 @@ const User = mongoose.model('User', {
     password: {
         type: String,
         required: true,
-        minLength: 7,
+        minLength: 8,
+        trim: true,
         validate(value){
             if(value.toLowerCase().includes('password')){
                 throw new Error('La password no puede ser password.');
