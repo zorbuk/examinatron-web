@@ -48,6 +48,17 @@ app.get('/crearUsuario', (req, res) => {
     res.render('crearuser', {  })
 });
 
+app.get('/users/login', async(req, res) => {
+    try{
+        const user = User.findUserByCredentials(req.body.email, req.body.password)
+        const token = user.generateAuthToken()
+        
+        res.send({user, token})
+    }catch(error){
+        res.status(404)
+    }
+})
+
 /* { ----------- API ROUTING ----------- } */
 // EXAMPLE: app.use('/api', modelRouter)
 app.use('/api', testRouter);
