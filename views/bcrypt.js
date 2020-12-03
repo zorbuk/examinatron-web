@@ -2,21 +2,19 @@ const bcrypt = require('bcryptjs')
 
 const password = '12345'
 
-const getHash = async(password) => {
-    //return await bcrypt.hash(password, 8)
+/* RESULTADO 1 */
+const comparePasswordHash = async (password) => {
     const hash = await bcrypt.hash(password, 8)
-    console.log(hash, '<- getHash()')
+    return await bcrypt.compare(password, hash)
 }
+comparePasswordHash(password).then((dato) => {
+    console.log('RESULTADO 1: ', dato)
+})
 
-const isValidPassword = async(arg1, arg2) => {
-    const hashedPassword = await getHash(arg2)
-    
-    // -------- TODO ---------
-    bcrypt.compare(arg1, hashedPassword);
-}
+/* RESULTADO 2 */
+const comparePasswordHash2 = (password) => bcrypt.hash(password,8)
+.then((hash) => {return bcrypt.compare(password, hash)})
+.then((dato)=>{console.log('RESULTADO 2:', dato)})
+.catch((e) => { 'mira por donde', console.log(e) })
 
-isValidPassword('123', password);
-
-/*const isValidPassword = bcrypt.compare('123', getHash(password))
-if()*/
-
+comparePasswordHash2(password)
